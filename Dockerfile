@@ -1,12 +1,12 @@
 FROM openjdk:8-jre-alpine
 
-ENV LT_VERSION 4.3
+ENV LT_VERSION latest_stable
 
 RUN apk update && \
   	apk add \
 	curl unzip && \
 	cd /srv && \
-	curl -o LanguageTool-$LT_VERSION.zip https://www.languagetool.org/download/LanguageTool-$LT_VERSION.zip && \
+	curl -o LanguageTool-$LT_VERSION.zip https://www.languagetool.org/download/LanguageTool-stable.zip && \
 	unzip LanguageTool-$LT_VERSION.zip && \
 	rm LanguageTool-$LT_VERSION.zip && \
 	rm -rf /var/cache/apk/*
