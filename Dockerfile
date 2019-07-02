@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ENV LT_VERSION 4.4
+ENV LT_VERSION 4.5
 
 RUN apk update && \
   	apk add \
